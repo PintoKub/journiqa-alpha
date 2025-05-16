@@ -1,0 +1,109 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 44px;
+  background: rgb(244, 237, 228); /* Teal color matching the shirt */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 1000;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.navbar.scrolled {
+  background: rgba(43, 93, 108, 0.98);
+}
+
+.nav-content {
+  max-width: 1024px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+}
+
+.nav-logo {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #060300; /* Light beige */
+  text-decoration: none;
+  flex-shrink: 0;
+  padding: 0 8px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: rgb(43, 93, 108); /* Light beige with opacity */
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: -0.01em;
+  transition: color 0.3s ease;
+  padding: 0 8px;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #e85c33; /* Orange/rust accent color */
+}
+
+.nav-login {
+  flex-shrink: 0;
+}
+
+.login-button {
+  background: none;
+  border: none;
+  color: #000000; /* Orange/rust accent color */
+  cursor: pointer;
+  font-size: 12px;
+  padding: 0 8px;
+  transition: color 0.3s ease;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.login-button:hover {
+  color: #c44a28; /* Darker orange */
+}
+
+
+@media (max-width: 768px) {
+  .nav-content {
+    padding: 0 16px;
+  }
+
+  .nav-logo {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+  }
+
+  .login-button {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-content {
+    justify-content: space-between;
+  }
+}
