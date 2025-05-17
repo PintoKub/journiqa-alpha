@@ -1,0 +1,137 @@
+.signup-page {
+  min-height: 100vh;
+  background-color: #FFF8E7;
+  padding: 16px;
+}
+
+.signup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.logo-image {
+  display: none;
+  width: 32px;
+  height: 32px;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: #333;
+}
+
+.signup-content {
+  max-width: 400px;
+  margin: 80px auto 40px;  /* Increased top margin to account for navbar */
+  padding: 0 16px;
+}
+
+.signup-content h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 32px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #F5F5F5;
+  font-size: 16px;
+}
+
+.password-input {
+  position: relative;
+}
+
+.show-password {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #007AFF;
+  cursor: pointer;
+}
+
+.form-options {
+  margin: 16px 0;
+}
+
+.terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #333;
+  font-size: 14px;
+}
+
+.terms input {
+  margin-top: 4px;
+}
+
+.signup-button {
+  width: 100%;
+  padding: 14px;
+  background: #FFB800;
+  border: none;
+  border-radius: 25px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 24px 0;
+  cursor: pointer;
+}
+
+.google-button {
+  width: 100%;
+  padding: 14px;
+  background: #333;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.google-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.login-prompt {
+  text-align: center;
+  margin-top: 24px;
+  color: #333;
+}
+
+.login-link {
+  color: #007AFF;
+  text-decoration: none;
+  margin-left: 4px;
+}

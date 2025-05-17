@@ -3,107 +3,79 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 44px;
-  background: rgb(244, 237, 228); /* Teal color matching the shirt */
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  height: 60px;
+  background-color: #FFF8E7;
   z-index: 1000;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-.navbar.scrolled {
-  background: rgba(43, 93, 108, 0.98);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .nav-content {
-  max-width: 1024px;
-  margin: 0 auto;
   height: 100%;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 22px;
+  width: 100%;
 }
 
 .nav-logo {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #060300; /* Light beige */
+  font-size: 18px;
+  font-weight: 600;
   text-decoration: none;
-  flex-shrink: 0;
-  padding: 0 8px;
+  color: #333;
+  margin-left: 40px;
 }
 
-.nav-links {
-  display: flex;
-  justify-content: center;
-  flex: 1;
-  gap: 32px;
+.menu-container {
+  position: relative;
+  margin-right: 40px;
 }
 
-.nav-links a {
-  color: rgb(43, 93, 108); /* Light beige with opacity */
-  text-decoration: none;
-  font-size: 12px;
-  letter-spacing: -0.01em;
-  transition: color 0.3s ease;
-  padding: 0 8px;
-  font-weight: 500;
-}
-
-.nav-links a:hover {
-  color: #e85c33; /* Orange/rust accent color */
-}
-
-.nav-login {
-  flex-shrink: 0;
-}
-
-.login-button {
+.menu-button {
   background: none;
   border: none;
-  color: #000000; /* Orange/rust accent color */
+  padding: 8px;
   cursor: pointer;
-  font-size: 12px;
-  padding: 0 8px;
-  transition: color 0.3s ease;
-  font-weight: 500;
-  letter-spacing: -0.01em;
+  color: #333;
 }
 
-.login-button:hover {
-  color: #c44a28; /* Darker orange */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: rgb(255, 251, 222);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  min-width: 150px;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: dropdownFadeIn 0.3s ease forwards;
 }
 
-
-@media (max-width: 768px) {
-  .nav-content {
-    padding: 0 16px;
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
-
-  .nav-logo {
-    font-size: 1rem;
-  }
-
-  .nav-links {
-    gap: 16px;
-  }
-
-  .nav-links a {
-    font-size: 11px;
-  }
-
-  .login-button {
-    font-size: 11px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (max-width: 480px) {
-  .nav-links {
-    display: none;
-  }
+.dropdown-item {
+  display: block;
+  padding: 8px 16px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  background-color: transparent;
+}
 
-  .nav-content {
-    justify-content: space-between;
-  }
+.dropdown-item:hover {
+  background-color: #FFF8E7;
+  color: #FFB800;
+  transform: translateX(5px);
 }
