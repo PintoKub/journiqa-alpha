@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Navbar from '../Navigation/Navbar'
+import ModeSelection from '../ModeSelection/ModeSelection'
 import './MainPage.css'
 
 function MainPage() {
+  const [showModeSelection, setShowModeSelection] = useState(false)
   const [activeCardIndex, setActiveCardIndex] = useState(0)
   const navigate = useNavigate()
 
@@ -34,7 +36,11 @@ function MainPage() {
   }, [])
 
   const handleBeginJourney = () => {
-    navigate('/select-mode')
+    setShowModeSelection(true)
+  }
+
+  const handleCloseModal = () => {
+    setShowModeSelection(false)
   }
 
   return (
@@ -74,6 +80,7 @@ function MainPage() {
           </div>
         </div>
       </div>
+      {showModeSelection && <ModeSelection onClose={handleCloseModal} />}
     </div>
   )
 }

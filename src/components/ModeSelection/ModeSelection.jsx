@@ -1,13 +1,13 @@
 import { useNavigate } from 'react-router-dom'
 import './ModeSelection.css'
 
-function ModeSelection() {
+function ModeSelection({ onClose }) {
   const navigate = useNavigate()
 
   return (
-    <div className="mode-selection-overlay">
-      <div className="mode-selection-container">
-        <h2>Choose Your Journey Mode</h2>
+    <div className="mode-selection-overlay" onClick={onClose}>
+      <div className="mode-selection-container" onClick={e => e.stopPropagation()}>
+        <h2>Choose Your Journey</h2>
         
         <div className="mode-cards">
           <div 
@@ -16,7 +16,7 @@ function ModeSelection() {
           >
             <img src="/mascot-planning.png" alt="Trip Planner" />
             <h3>Trip Planner</h3>
-            <p>Plan your perfect trip with detailed preferences for dates, interests, and budget</p>
+            <p>Plan your perfect trip with detailed preferences</p>
           </div>
 
           <div 
@@ -25,7 +25,7 @@ function ModeSelection() {
           >
             <img src="/mascot-enjoyable.png" alt="Quick Trip" />
             <h3>Quick Trip</h3>
-            <p>Discover exciting nearby places within 5km based on your budget</p>
+            <p>Discover nearby places within 5km</p>
           </div>
         </div>
       </div>
